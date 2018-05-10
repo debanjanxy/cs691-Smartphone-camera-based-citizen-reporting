@@ -1,0 +1,11 @@
+Localize the number plate:
+	First know the problem very well. Like what is the problem. From what domain the problem is coming. And how others had solved it previously. 
+	Read from wikipedia. Then read 2 or 3 research papers and then just note down the the ideas that you think is worth looking into for. 
+		
+		Identify the set of color and fonts in the plate images of our data set. And how 
+ 
+ 		Attempt to identify a rectangular region of an image where the colors are predominantly white, black or yellow, black.
+
+		Do some clean up on your subregion such conversion to pure black and white (monochrome) and perhaps scaling/shifting into a nice, tight rectangle.
+
+		Next employ an existing OCR (optical character recognition) algorithm on your sub-selected image region so see if you can read the text.

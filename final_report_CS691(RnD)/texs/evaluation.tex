@@ -1,0 +1,62 @@
+\chapter{Evaluation and Results}
+\section{Helmet detection}
+\par We tried 4 models as we described above on our dataset.Here is the result when we train our model upto 20 epocs.We compare them based on the metric Accuracy(number of correctly classified point divided by a total number of points).
+\vspace{.2in}
+
+\begin{tabu} to 0.9\textwidth { | X[l] | X[c] | X[r] | X[b] | }
+ \hline
+ \textbf{Module 1} & \textbf{Module 2} & \textbf{Module 3}& \textbf{Module 4} \\
+ \hline
+ 71.3\% ( 1st Run)\vspace{.1in} & 71\% ( 2 FC Layers)  & 70.9\% ( Learning rate 0.001)  & \vspace{.1in}73\% (LR=0.00001 and momentum=0.9)\\
+\hline
+71\% ( 2nd Run)\vspace{.1in} & 74.5 \% ( 1 FC Layers) & 74.9\% ( Learning rate 0.0001) & \vspace{.1in}71\% 
+(LR=0.00001 and momentum=0.5))\\
+\hline
+70.9\%( 3rd Run)\vspace{.1in} & 75\%( With Adam optimizer) & 66.9\%( Learning rate 0.00001) &\vspace{.1in}72\%
+(LR=0.000001 and momentum=0.9))\\
+\hline
+71.1\%( 4th Run)\vspace{.1in} & 75.7\%( 1 FC Layers and Adam) & 74.1\%( Learning rate 0.0001) &\vspace{.1in}73\%
+(LR=0.00001 and momentum=0.5))\\
+\hline
+\end{tabu}
+\\
+\vspace{.2in}
+\section{Number plate detection}
+\par We have used 71 images, collected from \cite{b13} having resolution $1080*1920$. There are 96 number plates present in these images. And there are 768 characters present in those 96 number plates. The accuracy of number plate detection module in case of method 1 given in table 4.2.1 is computed as follows : 
+\par Let, total number of license plates $=P$, number of plates detected by CCA algorithm $=p$, number of character images successfully segmented $=m$, total number of characters present in all the number plates $=n$ and number of charcaters successfully recognized by SVM $=s$. Then,
+$$ Accuracy\ of\ number\ plate\ localization\ module = \frac{p}{P}*100\% $$
+$$Accuracy\ of\ character\ segmentation\ module\ =\ \frac{m}{n}*100\%$$
+$$ Accuracy\ of\ character\ recognition\ module\ =\ \frac{s}{m}*100\%$$
+
+\vspace{.2in}
+
+\begin{tabu} to 0.8\textwidth { | X[l] | X[c] | X[r] | }
+ \hline
+ \textbf{Module Name} & \textbf{Accuracy} & \textbf{Time taken per frame(seconds)} \\
+ \hline
+ Number Plate Localization\vspace{.1in} & 75\%  & 1.3  \\
+\hline
+Character Segmentation\vspace{.1in} & 67.8\% & 2 \\
+\hline
+Character Recognition\vspace{.1in} & 63\% & 1.2 \\
+\hline
+\end{tabu}
+\vspace{.1in}
+\par Table 4.2.1: Accuracy of Method 1
+\vspace{.2in}
+\par The accuracy of method 2 for number plate detection is given in table 4.2.2. It is calculated as,
+$$ Accuracy\ of\ method\ 2=\frac{k}{K}$$ where $k=$ number of images for which number plate is correctly located and characters are correctly recognized, and $K=$ total number of images given as input.
+
+\vspace{.2in}
+
+\begin{tabu} to 0.8\textwidth { | X[l] | X[c] | X[r] | }
+
+ \hline
+ \textbf{Module Name} & \textbf{Accuracy} & \textbf{Time taken per frame(seconds)} \\
+ \hline
+ Number Plate Localization \& Character Recognition\vspace{.1in} & 95.3\%  & 59.5  \\
+\hline
+\end{tabu}
+\vspace{.1in}
+\par Table 4.2.2: Accuracy of Method 2\\
+\par If we compare table 4.2.1 \& table 4.2.2 then we can see that method 1 has taken less time but has given not so good accuracy. On the other hand, the method 2 has achieved higher accuracy but has taken more time. Hence, the frames per second (fps) obtained of method 1 and method 2 will be $\frac{1}{4.5}=0.22$ and $\frac{1}{59.5}=0.0168$ respectively.

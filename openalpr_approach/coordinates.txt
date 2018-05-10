@@ -1,0 +1,10 @@
+person: 46%, Top: 513, Bott: 584, Left: 189, Right: 230
+motorbike: 30%, Top: 561, Bott: 654, Left: 399, Right: 456
+person: 58%, Top: 490, Bott: 673, Left: 333, Right: 416
+motorbike: 51%, Top: 558, Bott: 716, Left: 27, Right: 267
+motorbike: 37%, Top: 569, Bott: 696, Left: 172, Right: 330
+motorbike: 28%, Top: 524, Bott: 683, Left: 315, Right: 423
+car: 49%, Top: 526, Bott: 667, Left: 455, Right: 567
+car: 33%, Top: 459, Bott: 825, Left: 1804, Right: 1915
+truck: 43%, Top: 246, Bott: 689, Left: 552, Right: 744
+truck: 85%, Top: 3, Bott: 927, Left: 709, Right: 1835
